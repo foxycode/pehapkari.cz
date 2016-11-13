@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <title>Kde najdeš PHP kámoše</title>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Oficiální stránky PHP komunity">
+        <meta name="keywords" content="PHP, komunita, programování">
+        <meta name="author" content="http://pehapkari.cz">
+        <meta name="robots" content="index, follow">
+        <meta property="og:image" content="images/php-square.png">
+
+                <meta name="google-site-verification" content="Ud43Nzds0JtHAlgRzCyt5J3o45ad_KTMC6jgjePrx7U" />
+
+                <link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
+        <link href="/assets/css/style.css?v=newheader" rel="stylesheet">
+
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+        <link href="/favicon.ico" rel="shortcut icon">
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+        <!-- Facebook Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+                n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+                    document,'script','//connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '201338863559186');
+            fbq('track', "PageView");</script>
+        <noscript><img height="1" width="1" style="display:none"
+                       src="https://www.facebook.com/tr?id=201338863559186&ev=PageView&noscript=1"
+            /></noscript>
+        <!-- End Facebook Pixel Code -->
+    </head>
+
+    <body>
+                <header>
+            <a href="/"><img src="/assets/images/logo-header.svg" alt=""></a>
+
+            <nav class="top-navigation">
+                                <a href="/potkavame-se">srazy</a>
+                <a href="/slovnicek">slovník</a>
+            </nav>
+        </header>
+        
+                    
+<div class="section">
+    <div class="container">
+        <div class="row text-center">
+            <h2>
+                <em class="fa fa-map-o fa-fw"></em>
+                Mapka PHP programátorů
+            </h2>
+            <a href="#form" title="Přidej se" class="btn btn-lg btn-info" role="button">
+                <em class="fa fa-user-plus fa-fw"></em>
+                Přidej se
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="section grey-bg">
+    <div class="container">
+        <div class="row">
+            <div id="map" class="col-xs-12"></div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="container" id="form">
+        <div class="row">
+            <h2 class="text-center">
+                <em class="fa fa-user-plus fa-fw"></em>
+                Přidej se
+            </h2>
+        </div>
+        <div class="row" id="formRem">
+            <div class="col-sm-5 col-sm-offset-1">
+                <div id="formMap" class="col-xs-12"></div>
+            </div>
+            <div class="col-sm-5">
+                <form id="pushToFire">
+                    <div class="form-group">
+                        <label for="city">Ulice, Město <sup class="text-danger">*</sup></label>
+                        <div class="input-group">
+                            <input type="text" name="city" placeholder="Ulice, Město" id="city" class="form-control" required />
+                            <span class="input-group-btn">
+                                <button class="btn btn-info" type="button" id="search">Najdi!</button>
+                            </span>
+                        </div>
+                        <span class="help-block">Uložím si jen souřadnice, vážně <em class="fa fa-smile-o"></em></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Jméno <sup class="text-danger">*</sup></label>
+                        <input type="text" name="name" placeholder="Evelín" id="name" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="surname">Příjmení <sup class="text-danger">*</sup></label>
+                        <input type="text" name="surname" placeholder="Pehapkář" id="surname" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email <sup class="text-danger">*</sup></label>
+                        <input type="email" name="email" placeholder="evelin@pehapkar.cz" id="email" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="tel">Telefon</label>
+                        <input type="tel" name="tel" placeholder="123456789" id="tel" class="form-control" />
+                    </div>
+                    <button type="button" id="fire" class="btn btn-lg btn-warning">Pushni mě tam</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+                    <footer>
+                <div class="container">
+                    <h2 class="text-center">
+                        <em class="fa fa-hand-peace-o fa-fw"></em>
+                        Děkujeme za podporu
+                    </h2>
+
+                    <div id="sponsor-logos" class="text-center row">
+                        <a href="http://www.shopsys.cz">
+                            <img src="/assets/images/sponsors/shopsys.png">
+                        </a>
+                        <a href="http://www.jebrains.cz">
+                            <img src="/assets/images/sponsors/jetbrains.png">
+                        </a>
+                        <a href="http://www.rosti.cz">
+                            <img src="/assets/images/sponsors/rosti.png">
+                        </a>
+
+                        <br>
+
+                        <p>
+                            Chceš se přidat k našim sponzorům? Napiš nám na <a href="mailto:tomas@pehapkari.cz">tomas@pehapkari.cz</a>
+                        </p>
+                    </div>
+
+               </div>
+            </footer>
+        
+                    <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+            <script src="/assets/js/fireMap.js"></script>
+            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBZnH6oy2-TO9VhtzUvZirtIlAwuOVGXP4&callback=initMaps"></script>
+        
+        <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                            (i[r].q = i[r].q || []).push(arguments)
+                        }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-66556646-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html>
